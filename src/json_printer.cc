@@ -17,7 +17,7 @@
 #include <algorithm>
 #include <utility>
 #include <nlohmann/json.hpp>
-
+#include "../prefetcher/bandit/bandit.h"
 #include "stats_printer.h"
 
 void to_json(nlohmann::json& j, const O3_CPU::stats_type& stats)
@@ -82,6 +82,12 @@ void to_json(nlohmann::json& j, const DRAM_CHANNEL::stats_type stats)
                      {"WQ ROW_BUFFER_MISS", stats.WQ_ROW_BUFFER_MISS},
                      {"AVG DBUS CONGESTED CYCLE", (std::ceil(stats.dbus_cycle_congested) / std::ceil(stats.dbus_count_congested))},
                      {"REFRESHES ISSUED", stats.refresh_cycles}};
+}
+void to_json(nlohmann::json& j, const bandit::stats_type& stats)
+{
+  j = {
+    {"total_switches", stats.total_switches}
+  };
 }
 
 namespace champsim
