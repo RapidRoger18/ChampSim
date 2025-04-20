@@ -13,11 +13,19 @@
 
 struct bandit : public champsim::modules::prefetcher {
     static constexpr int NUM_PREFETCHERS = 2;
-    static constexpr int SWITCH_PREFETCHER = 1000; 
+    static constexpr int SWITCH_PREFETCHER = 10000; 
+    struct stats_type {
+      int total_switches = 0;
+    } stats;
   
+    stats_type get_stats() {
+      return stats;
+    }
     int current_pref = 0;
     int access_counter = 0;
     int totalswitches = 1;
+    int useful_count = 0;
+    int total_count = 0;
     
     std::array<double, NUM_PREFETCHERS> rTable = {1.0, 1.0};
     std::array<int, NUM_PREFETCHERS> nTable = {1, 1};
