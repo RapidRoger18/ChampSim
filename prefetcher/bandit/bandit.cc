@@ -24,7 +24,7 @@ int bandit::select_prefetcher() {
     return best_action;
 }
 void bandit::update_reward(double reward) {
-    rTable[current_pref] = 0.8 * rTable[current_pref] + 0.2 * reward;
+    rTable[current_pref] = 0.9 * rTable[current_pref] + 0.1 * reward;
     nTable[current_pref]++;
     totalswitches++;
     stats.total_switches = totalswitches;
@@ -33,15 +33,19 @@ void bandit::update_reward(double reward) {
 uint32_t bandit::prefetcher_cache_operate(champsim::address addr, champsim::address ip, uint8_t cache_hit, bool useful_prefetch, access_type type, uint32_t metadata_in){
   access_counter++;
   total_count++;
-  if (useful_prefetch) useful_count ++;
   if (access_counter % SWITCH_PREFETCHER == 0) {
-    double reward = (double)useful_count / total_count;
+    cache_stats curr_stats = this->intern_->sim_stats;
+    cache_stats diff = curr_stats - prev_stats;
+
+    double accuracy = (diff.pf_issued > 0) ? diff.pf_useful/diff.pf_issued : 0.0;
+    double penalty = (diff.pf_issued  > 0) ? diff.pf_useless/diff.pf_issued : 0.0; 
+    double reward = accuracy - 0.2 * penalty;
+
     update_reward(reward);
     current_pref = select_prefetcher();
 
-    useful_count = 0;
-    total_count = 0;
-  }
+    prev_stats = curr_stats; // update for next interval
+}
   switch (current_pref) {
     case 0:
       return stride.prefetcher_cache_operate(addr, ip, cache_hit, useful_prefetch, type, metadata_in);

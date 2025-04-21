@@ -26,6 +26,7 @@ struct bandit : public champsim::modules::prefetcher {
     int totalswitches = 1;
     int useful_count = 0;
     int total_count = 0;
+    cache_stats prev_stats;
     
     std::array<double, NUM_PREFETCHERS> rTable = {1.0, 1.0};
     std::array<int, NUM_PREFETCHERS> nTable = {1, 1};
