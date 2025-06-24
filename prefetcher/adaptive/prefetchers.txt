@@ -1,5 +1,0 @@
-content directed- check for addresses in cache and prefetch that        -NP
-stride - stride
-multi stride - pattern
-corelation - based on which is likely to appear after first
-locality based
