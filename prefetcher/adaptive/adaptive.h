@@ -44,7 +44,7 @@ struct RLState {
     std::array<uint64_t, max_recent_blocks> access_timestamps{};
 
     std::vector<int> active_tiles() const;
-
+    int last_action = 0;
     access_type last_access_type{};
     bool was_cache_hit = false;
     uint8_t prefetch_count = 0;
@@ -53,11 +53,12 @@ struct RLState {
     size_t useful_prefetches = 0;
 };
 
-struct RLPatterns{
-    float confidence_simple_stride = 0.0f;
-    float confidence_multi_stride = 0.0f;
-    float confidence_locality = 0.0f;
-    float confidence_correlation = 0.0f;
+enum PrefetchActions{
+    no_prefetch = 0,
+    simple_stride = 1,
+    multi_stride = 2,
+    locality = 3,
+    correlation = 4
 };
 
 struct QTableEntry {
@@ -101,8 +102,14 @@ struct QTableEntry {
     std::unordered_map<champsim::block_number, champsim::block_number> correlation_table;
 
     // Helper Functions
-    void update_confidence(float& conf, bool detected, bool useful);
-    int select_action(const std::array<float, MAX_ACTIONS>& q_values, float epsilon);
+    int select_action(const std::array<float, MAX_ACTIONS>& q_values, float epsilon);  // select actions 
+    float compute_reward(access_type type, uint8_t cache_hit, bool useful_prefetch);   // compute reward based on useful prefetch
+    void update_q_value(const QTableEntry& prev_entry, int prev_action, float reward, const QTableEntry& curr_entry, 
+                        const std::array<float, MAX_ACTIONS>& curr_q_values, float alpha = 0.1f, float gamma = 0.9f); // update the q-value with reward
+    void adaptive::issue_stride_prefetch(champsim::address addr, int stride, int degree = 2); // further implementation after the action is decided 
+    void issue_multi_stride_prefetch(champsim::address addr);
+    void issue_locality_prefetch(champsim::address addr);
+    void issue_correlation_prefetch(champsim::address addr);
 
   private:
     void update_reward(const RLState& state, bool useful);
