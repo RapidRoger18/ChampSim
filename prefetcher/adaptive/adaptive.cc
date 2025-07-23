@@ -17,15 +17,6 @@ adaptive::adaptive(CACHE* cache_ptr)
     std::cout << "  TABLE_SETS   = " << TABLE_SETS   << ", TABLE_SET_ENTRIES   = " << TABLE_SET_ENTRIES << "\n";
 }
 
-void update_confidence(float& confidence, bool detected, bool useful) {
-    if (detected && confidence < 0.5f)
-        confidence = 0.5f;
-    if (useful)
-        confidence = std::min(1.0f, confidence + 0.1f);
-    else
-        confidence *= 0.9f;
-}
-
 // Returns tile indices for a feature value
 std::vector<int> tile_indices(int feature_value, int num_tilings, int tiles_per_tiling) {
     std::vector<int> indices;
@@ -69,7 +60,7 @@ float adaptive::compute_reward(access_type type, uint8_t cache_hit, bool useful_
         if (cache_hit && useful_prefetch)
             return +1.0f; // useful prefetch
         else if (!cache_hit)
-            return -1.0f; // demand miss not covered
+            return -0.05f; // demand miss not covered
         else
             return 0.0f;  // load hit, but not due to prefetch
     }
@@ -85,12 +76,13 @@ void adaptive::update_q_value(const QTableEntry& prev_entry, int prev_action, fl
     if (q_entry.has_value())
         q_values = q_entry->q_values;
     else{
-        q_values.fill(0.01f);
-        q_values[no_prefetch] = 0.0f;
+        q_values.fill(0.1f);
+        q_values[no_prefetch] = -1.0f;
     }
     float max_next_q = *std::max_element(curr_q_values.begin(), curr_q_values.end());
 
     q_values[prev_action] += alpha * (reward + gamma * max_next_q - q_values[prev_action]); //Q(s, a) ← Q(s, a) + α * (reward + γ * max(Q(s’, a’)) - Q(s, a))
+    //q_values[prev_action] = std::max(-2.0f, std::min(5.0f, q_values[prev_action]));
     // Save updated entry
     QTableEntry updated = prev_entry;
     updated.q_values = q_values;
@@ -248,6 +240,7 @@ uint32_t adaptive::prefetcher_cache_operate(champsim::address addr, champsim::ad
   prev_entry = q_entry;
   prev_action = action;
   state.last_action = action;
+
   return metadata_in;
 }
 
