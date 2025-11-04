@@ -33,6 +33,7 @@ struct bandit : public champsim::modules::prefetcher {
 
     ip_stride stride;
     va_ampm_lite ampmlite;
+    next_line nextline;
     
     bandit(CACHE* cache);
     // inbuilt function calls

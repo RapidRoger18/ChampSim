@@ -1,0 +1,27 @@
+
+Title:
+Exploring Lightweight Reinforcement Learning for Adaptive Prefetching
+
+Motivation
+Hardware prefetching is a well-established technique to reduce memory access latency. Traditional heuristic prefetchers like AMPM offer high coverage but often suffer from overfetching and bandwidth wastage. Our goal is to explore whether lightweight learning techniques—particularly Reinforcement Learning (RL)—can offer comparable or better performance with lower design complexity and adaptability.
+
+Methodology
+We implement two RL-based prefetchers in the ChampSim simulation framework and evaluate them against a traditional AMPM-Lite baseline and a no-prefetching configuration:
+
+1. Bandit-Based Prefetcher
+A simple ε-greedy bandit algorithm selects among fixed prefetchers (ampnm_lite, ip_stride). Rewards are given for useful prefetches, and penalties for useless ones. This approach quickly saturates, issuing prefetches without learning nuanced patterns.
+
+2. Adaptive RL Prefetcher
+We apply Q-learning to learn when and how to prefetch based on recent stride behavior:
+State: Current stride and a simple stride-pattern signature
+Actions: Prefetch deteched stride(stride pattern, multi-stride pattern or locality based pattern)
+Rewards: +1 for useful prefetches, –1 for evicted/unused ones
+This allows for gradual learning of beneficial patterns while suppressing ineffective ones.
+
+| Prefetcher     | Requested | Issued  | Useful | Useless |
+|----------------|-----------|---------|--------|---------|
+| AMPM           |      1041 |    1041 |    251 |     740 |
+| IP Stride      |      3527 |    3527 |    104 |      55 |
+| Next Line      |   1026273 |  992622 |    308 |     443 |
+| Bandit         |      2310 |    2310 |    196 |     500 |
+| Adaptive (RL)  |    145220 |  139580 |    484 |    1028 |

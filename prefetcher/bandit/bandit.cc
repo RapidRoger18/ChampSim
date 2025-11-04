@@ -6,7 +6,7 @@
 #include "cache.h"
 
 
-  bandit::bandit(CACHE* cache) : champsim::modules::prefetcher(cache), stride(cache), ampmlite(cache) {}
+  bandit::bandit(CACHE* cache) : champsim::modules::prefetcher(cache), stride(cache), ampmlite(cache), nextline(cache) {}
 
 int bandit::select_prefetcher() {
     double best_score = -1e9;
@@ -51,6 +51,8 @@ uint32_t bandit::prefetcher_cache_operate(champsim::address addr, champsim::addr
       return stride.prefetcher_cache_operate(addr, ip, cache_hit, useful_prefetch, type, metadata_in);
     case 1:
       return ampmlite.prefetcher_cache_operate(addr, ip, cache_hit, useful_prefetch, type, metadata_in);
+    case 2:
+      return nextline.prefetcher_cache_operate(addr, ip, cache_hit, useful_prefetch, type, metadata_in);
     default:
       return metadata_in;
   }

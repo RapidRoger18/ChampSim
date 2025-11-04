@@ -48,22 +48,29 @@ int function::select_action(const std::array<float, MAX_ACTIONS>& q_values, floa
     }
 }
 
-float function::compute_reward(access_type type, uint8_t cache_hit, bool useful_prefetch) {
+float function::compute_reward(access_type type, uint8_t cache_hit, bool useful_prefetch, int action) {
     float reward = 0.0f;
-    if (type == access_type::LOAD || type == access_type::RFO) {
-        if (cache_hit && useful_prefetch){
-            reward = +1.0f; // useful prefetch
-            //std::cerr << "Reward: " << reward << " (hit=" << (int)cache_hit << ", useful=" << useful_prefetch << ")\n";
 
+    if (action == no_prefetch) {
+        if (!cache_hit) {
+            reward = -0.1f;  // mild penalty for missing without trying
+        } else {
+            reward = 0.1f;   // light reward for being passive and still hitting
+        }
+    }
+    else {
+        if (cache_hit && useful_prefetch){
+            reward = +0.8f; // useful prefetch
         }
         else if (!cache_hit) {
             reward = -1.0f; // demand miss not covered
-            //std::cerr << "Reward: " << reward << " (hit=" << (int)cache_hit << ", useful=" << useful_prefetch << ")\n";
         }
-        else
-            reward = -0.1f;  // load hit, but not due to prefetch
+        else {
+            reward = -0.2f;  // load hit, but not due to prefetch
+        }
     }
-    return reward; // for WRITE or PREFETCH accesses
+
+    return reward;
 }
 
 void function::update_q_value(int prev_index, int prev_action, float reward, int curr_index, float alpha, float gamma)
@@ -79,7 +86,7 @@ bool function::issue_stride_prefetch(champsim::address addr, int stride, int deg
     champsim::address pf_addr = addr;
     if (stride == 0) return true; 
     bool success = false;
-    bool light_load = intern_->get_mshr_occupancy_ratio() < 0.5;
+    bool light_load = intern_->get_mshr_occupancy_ratio() < 0.3;
     for (int i = 0; i < degree; ++i) {
         pf_addr += stride;
         if (champsim::page_number{pf_addr} != champsim::page_number{addr})
@@ -111,7 +118,7 @@ bool function::issue_multi_stride_prefetch(champsim::address ip, champsim::addre
             for (std::size_t j = 1; j <= degree; ++j) {
                 auto next_stride = state.stride_history[i + j];
                 block_addr += next_stride;
-                bool light_load = intern_->get_mshr_occupancy_ratio() < 0.5;
+                bool light_load = intern_->get_mshr_occupancy_ratio() < 0.3;
 
                 champsim::address pf_addr{block_addr};
                 if (champsim::page_number{pf_addr} != champsim::page_number{addr})
@@ -132,7 +139,7 @@ bool function::issue_multi_stride_prefetch(champsim::address ip, champsim::addre
 
 bool function::issue_locality_prefetch(champsim::address addr, int degree) {
     champsim::block_number block_addr{addr};
-    bool light_load = intern_->get_mshr_occupancy_ratio() < 0.5;
+    bool light_load = intern_->get_mshr_occupancy_ratio() < 0.3;
     bool success = false;
     for (int i = 1; i <= degree; ++i) {
         champsim::address pf_addr{block_addr + i};
@@ -162,7 +169,7 @@ bool function::issue_locality_prefetch(champsim::address addr, int degree) {
 
 bool function::issue_correlation_prefetch(champsim::address ip, champsim::address addr) {
     auto it = table.check_hit(RLState{ip});
-    bool light_load = intern_->get_mshr_occupancy_ratio() < 0.5;
+    bool light_load = intern_->get_mshr_occupancy_ratio() < 0.3;
     bool success = false;
     if (!it.has_value()) return false;
     const RLState& state = it.value();
@@ -228,12 +235,12 @@ uint32_t function::prefetcher_cache_operate(champsim::address addr, champsim::ad
   int q_index = encode_state(state.last_stride, state.stride_history);
   std::array<float, MAX_ACTIONS>& q_values = q_table[q_index];
   int action = 0;
-  if (state.stride_history_valid) action = select_action(q_values, 0.2f);  // Take a action 20% explore
+  if (state.stride_history_valid) action = select_action(q_values, 0.05f);  // Take a action 20% explore
   PrefetchTask task{ip, addr, action, stride};
   prefetch_queue.push_back(task);
   // assign reward and update the q table 
   if (state.last_action != -1) {
-      float reward = compute_reward(type, cache_hit, useful_prefetch);
+      float reward = compute_reward(type, cache_hit, useful_prefetch, action);
       update_q_value(state.last_index, state.last_action, reward, q_index);
   }
 

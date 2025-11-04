@@ -38,6 +38,7 @@ struct RLState {
     int last_action = -1;
     bool stride_history_valid = false;
     int stride_count = 0;
+    
     auto index() const
     {
       using namespace champsim::data::data_literals;
@@ -76,8 +77,8 @@ enum PrefetchActions{
     correlation = 4
 };
 
-    bool issue_stride_prefetch(champsim::address addr, int stride, int degree = 2); // further implementation after the action is decided 
-    bool issue_multi_stride_prefetch(champsim::address ip, champsim::address addr, int degree = 3);
+    bool issue_stride_prefetch(champsim::address addr, int stride, int degree = 1); // further implementation after the action is decided 
+    bool issue_multi_stride_prefetch(champsim::address ip, champsim::address addr, int degree = 1);
     bool issue_locality_prefetch(champsim::address addr, int degree = 2);
     bool issue_correlation_prefetch(champsim::address ip, champsim::address addr);
 
@@ -109,7 +110,7 @@ struct PrefetchStats
     // Helper Functions
     CACHE* cache;
     int select_action(const std::array<float, MAX_ACTIONS>& q_values, float epsilon);  // select actions 
-    float compute_reward(access_type type, uint8_t cache_hit, bool useful_prefetch);   // compute reward based on useful prefetch
+    float compute_reward(access_type type, uint8_t cache_hit, bool useful_prefetch, int action);   // compute reward based on useful prefetch
     void update_q_value(int prev_index, int prev_action, float reward, int curr_index, float alpha = 0.1f, float gamma = 0.9f);
 };
 #endif
