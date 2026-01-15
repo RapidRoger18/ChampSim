@@ -1,0 +1,23 @@
+# =========================================
+# SPEC TINY (4 traces, SINGLE-CORE)
+# =========================================
+
+NAME=403.gcc-16B
+TRACE=${TRACES_HOME}/403.gcc-16B.champsimtrace.xz
+KNOBS=
+
+NAME=429.mcf-184B
+TRACE=${TRACES_HOME}/429.mcf-184B.champsimtrace.xz
+KNOBS=
+
+NAME=437.leslie3d-149B
+TRACE=${TRACES_HOME}/437.leslie3d-149B.champsimtrace.xz
+KNOBS=
+
+NAME=470.lbm-1274B
+TRACE=${TRACES_HOME}/470.lbm-1274B.champsimtrace.xz
+KNOBS=
+
+NAME=482.sphinx3-1297B
+TRACE=${TRACES_HOME}/482.sphinx3-1297B.champsimtrace.xz
+KNOBS=

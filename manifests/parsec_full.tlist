@@ -1,0 +1,230 @@
+# =========================================
+# PARSEC 2.1 FULL (ALL traces, SINGLE-CORE)
+# =========================================
+
+# -------- blackscholes --------
+NAME=parsec_blackscholes_drop_1750M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.blackscholes.simlarge.prebuilt.drop_1750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_blackscholes_drop_2000M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.blackscholes.simlarge.prebuilt.drop_2000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_blackscholes_drop_3000M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.blackscholes.simlarge.prebuilt.drop_3000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_blackscholes_drop_4000M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.blackscholes.simlarge.prebuilt.drop_4000M.length_216M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+
+# -------- bodytrack --------
+NAME=parsec_bodytrack_drop_2000M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.bodytrack.simlarge.prebuilt.drop_2000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_bodytrack_drop_3500M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.bodytrack.simlarge.prebuilt.drop_3500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_bodytrack_drop_6750M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.bodytrack.simlarge.prebuilt.drop_6750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+
+# -------- canneal --------
+NAME=parsec_canneal_drop_0M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.canneal.simlarge.prebuilt.drop_0M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_canneal_drop_500M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.canneal.simlarge.prebuilt.drop_500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_canneal_drop_1250M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.canneal.simlarge.prebuilt.drop_1250M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_canneal_drop_3000M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.canneal.simlarge.prebuilt.drop_3000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_canneal_drop_4500M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.canneal.simlarge.prebuilt.drop_4500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_canneal_drop_4750M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.canneal.simlarge.prebuilt.drop_4750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_canneal_drop_5000M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.canneal.simlarge.prebuilt.drop_5000M.length_15M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+
+# -------- dedup --------
+NAME=parsec_dedup_drop_3750M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.dedup.simlarge.prebuilt.drop_3750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_dedup_drop_7250M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.dedup.simlarge.prebuilt.drop_7250M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_dedup_drop_29000M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.dedup.simlarge.prebuilt.drop_29000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+
+# -------- facesim --------
+NAME=parsec_facesim_drop_750M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.facesim.simlarge.prebuilt.drop_750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_facesim_drop_1500M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.facesim.simlarge.prebuilt.drop_1500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_facesim_drop_4750M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.facesim.simlarge.prebuilt.drop_4750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_facesim_drop_5000M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.facesim.simlarge.prebuilt.drop_5000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_facesim_drop_9750M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.facesim.simlarge.prebuilt.drop_9750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_facesim_drop_11750M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.facesim.simlarge.prebuilt.drop_11750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_facesim_drop_21500M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.facesim.simlarge.prebuilt.drop_21500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+
+# -------- fluidanimate --------
+NAME=parsec_fluidanimate_drop_9500M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.fluidanimate.simlarge.prebuilt.drop_9500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_fluidanimate_drop_10000M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.fluidanimate.simlarge.prebuilt.drop_10000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_fluidanimate_drop_10250M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.fluidanimate.simlarge.prebuilt.drop_10250M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+
+# -------- raytrace --------
+NAME=parsec_raytrace_drop_250M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.raytrace.simlarge.prebuilt.drop_250M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_raytrace_drop_16500M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.raytrace.simlarge.prebuilt.drop_16500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_raytrace_drop_23500M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.raytrace.simlarge.prebuilt.drop_23500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_raytrace_drop_23750M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.raytrace.simlarge.prebuilt.drop_23750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_raytrace_drop_25000M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.raytrace.simlarge.prebuilt.drop_25000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_raytrace_drop_25500M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.raytrace.simlarge.prebuilt.drop_25500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_raytrace_drop_36250M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.raytrace.simlarge.prebuilt.drop_36250M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_raytrace_drop_37000M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.raytrace.simlarge.prebuilt.drop_37000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+
+# -------- streamcluster --------
+NAME=parsec_streamcluster_drop_0M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.streamcluster.simlarge.prebuilt.drop_0M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_streamcluster_drop_250M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.streamcluster.simlarge.prebuilt.drop_250M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_streamcluster_drop_4750M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.streamcluster.simlarge.prebuilt.drop_4750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_streamcluster_drop_6250M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.streamcluster.simlarge.prebuilt.drop_6250M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_streamcluster_drop_14750M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.streamcluster.simlarge.prebuilt.drop_14750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+
+# -------- swaptions --------
+NAME=parsec_swaptions_drop_0M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.swaptions.simlarge.prebuilt.drop_0M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_swaptions_drop_4250M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.swaptions.simlarge.prebuilt.drop_4250M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_swaptions_drop_5250M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.swaptions.simlarge.prebuilt.drop_5250M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_swaptions_drop_6500M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.swaptions.simlarge.prebuilt.drop_6500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_swaptions_drop_15000M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.swaptions.simlarge.prebuilt.drop_15000M.length_93M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+
+# -------- vips --------
+NAME=parsec_vips_drop_7500M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.vips.simlarge.prebuilt.drop_7500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_vips_drop_10500M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.vips.simlarge.prebuilt.drop_10500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_vips_drop_19250M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.vips.simlarge.prebuilt.drop_19250M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_vips_drop_25250M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.vips.simlarge.prebuilt.drop_25250M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_vips_drop_27250M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.vips.simlarge.prebuilt.drop_27250M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_vips_drop_32250M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.vips.simlarge.prebuilt.drop_32250M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=parsec_vips_drop_33250M
+TRACE=${TRACES_HOME}/parsec/parsec_2.1.vips.simlarge.prebuilt.drop_33250M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000

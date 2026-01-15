@@ -1,0 +1,426 @@
+# =========================================
+# LIGRA FULL (ALL traces, SINGLE-CORE)
+# =========================================
+
+# -------- BC --------
+NAME=ligra_BC_drop_500M
+TRACE=${TRACES_HOME}/ligra/ligra_BC.com-lj.ungraph.gcc_6.3.0_O3.drop_500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BC_drop_3500M
+TRACE=${TRACES_HOME}/ligra/ligra_BC.com-lj.ungraph.gcc_6.3.0_O3.drop_3500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BC_drop_5000M
+TRACE=${TRACES_HOME}/ligra/ligra_BC.com-lj.ungraph.gcc_6.3.0_O3.drop_5000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BC_drop_11500M
+TRACE=${TRACES_HOME}/ligra/ligra_BC.com-lj.ungraph.gcc_6.3.0_O3.drop_11500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BC_drop_15500M
+TRACE=${TRACES_HOME}/ligra/ligra_BC.com-lj.ungraph.gcc_6.3.0_O3.drop_15500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BC_drop_15750M
+TRACE=${TRACES_HOME}/ligra/ligra_BC.com-lj.ungraph.gcc_6.3.0_O3.drop_15750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BC_drop_17000M
+TRACE=${TRACES_HOME}/ligra/ligra_BC.com-lj.ungraph.gcc_6.3.0_O3.drop_17000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BC_drop_26750M
+TRACE=${TRACES_HOME}/ligra/ligra_BC.com-lj.ungraph.gcc_6.3.0_O3.drop_26750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+
+# -------- Bellman-Ford --------
+NAME=ligra_BellmanFord_drop_1750M
+TRACE=${TRACES_HOME}/ligra/ligra_BellmanFord.com-lj.ungraph.gcc_6.3.0_O3.drop_1750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BellmanFord_drop_4000M
+TRACE=${TRACES_HOME}/ligra/ligra_BellmanFord.com-lj.ungraph.gcc_6.3.0_O3.drop_4000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BellmanFord_drop_5500M
+TRACE=${TRACES_HOME}/ligra/ligra_BellmanFord.com-lj.ungraph.gcc_6.3.0_O3.drop_5500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BellmanFord_drop_7500M
+TRACE=${TRACES_HOME}/ligra/ligra_BellmanFord.com-lj.ungraph.gcc_6.3.0_O3.drop_7500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BellmanFord_drop_14000M
+TRACE=${TRACES_HOME}/ligra/ligra_BellmanFord.com-lj.ungraph.gcc_6.3.0_O3.drop_14000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BellmanFord_drop_22250M
+TRACE=${TRACES_HOME}/ligra/ligra_BellmanFord.com-lj.ungraph.gcc_6.3.0_O3.drop_22250M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BellmanFord_drop_24750M
+TRACE=${TRACES_HOME}/ligra/ligra_BellmanFord.com-lj.ungraph.gcc_6.3.0_O3.drop_24750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BellmanFord_drop_33750M
+TRACE=${TRACES_HOME}/ligra/ligra_BellmanFord.com-lj.ungraph.gcc_6.3.0_O3.drop_33750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+
+# -------- BFS --------
+NAME=ligra_BFS_drop_500M
+TRACE=${TRACES_HOME}/ligra/ligra_BFS.com-lj.ungraph.gcc_6.3.0_O3.drop_500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BFS_drop_3500M
+TRACE=${TRACES_HOME}/ligra/ligra_BFS.com-lj.ungraph.gcc_6.3.0_O3.drop_3500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BFS_drop_5000M
+TRACE=${TRACES_HOME}/ligra/ligra_BFS.com-lj.ungraph.gcc_6.3.0_O3.drop_5000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BFS_drop_11500M
+TRACE=${TRACES_HOME}/ligra/ligra_BFS.com-lj.ungraph.gcc_6.3.0_O3.drop_11500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BFS_drop_15750M
+TRACE=${TRACES_HOME}/ligra/ligra_BFS.com-lj.ungraph.gcc_6.3.0_O3.drop_15750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BFS_drop_17000M
+TRACE=${TRACES_HOME}/ligra/ligra_BFS.com-lj.ungraph.gcc_6.3.0_O3.drop_17000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BFS_drop_20250M
+TRACE=${TRACES_HOME}/ligra/ligra_BFS.com-lj.ungraph.gcc_6.3.0_O3.drop_20250M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BFS_drop_21500M
+TRACE=${TRACES_HOME}/ligra/ligra_BFS.com-lj.ungraph.gcc_6.3.0_O3.drop_21500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+
+# -------- BFS-Bitvector --------
+NAME=ligra_BFSBitvector_drop_500M
+TRACE=${TRACES_HOME}/ligra/ligra_BFS-Bitvector.com-lj.ungraph.gcc_6.3.0_O3.drop_500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BFSBitvector_drop_2500M
+TRACE=${TRACES_HOME}/ligra/ligra_BFS-Bitvector.com-lj.ungraph.gcc_6.3.0_O3.drop_2500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BFSBitvector_drop_9750M
+TRACE=${TRACES_HOME}/ligra/ligra_BFS-Bitvector.com-lj.ungraph.gcc_6.3.0_O3.drop_9750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BFSBitvector_drop_18000M
+TRACE=${TRACES_HOME}/ligra/ligra_BFS-Bitvector.com-lj.ungraph.gcc_6.3.0_O3.drop_18000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BFSBitvector_drop_23000M
+TRACE=${TRACES_HOME}/ligra/ligra_BFS-Bitvector.com-lj.ungraph.gcc_6.3.0_O3.drop_23000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+
+# -------- BFSCC --------
+NAME=ligra_BFSCC_drop_750M
+TRACE=${TRACES_HOME}/ligra/ligra_BFSCC.com-lj.ungraph.gcc_6.3.0_O3.drop_750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BFSCC_drop_3500M
+TRACE=${TRACES_HOME}/ligra/ligra_BFSCC.com-lj.ungraph.gcc_6.3.0_O3.drop_3500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BFSCC_drop_5000M
+TRACE=${TRACES_HOME}/ligra/ligra_BFSCC.com-lj.ungraph.gcc_6.3.0_O3.drop_5000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BFSCC_drop_6750M
+TRACE=${TRACES_HOME}/ligra/ligra_BFSCC.com-lj.ungraph.gcc_6.3.0_O3.drop_6750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BFSCC_drop_11250M
+TRACE=${TRACES_HOME}/ligra/ligra_BFSCC.com-lj.ungraph.gcc_6.3.0_O3.drop_11250M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BFSCC_drop_15500M
+TRACE=${TRACES_HOME}/ligra/ligra_BFSCC.com-lj.ungraph.gcc_6.3.0_O3.drop_15500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BFSCC_drop_17000M
+TRACE=${TRACES_HOME}/ligra/ligra_BFSCC.com-lj.ungraph.gcc_6.3.0_O3.drop_17000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BFSCC_drop_18750M
+TRACE=${TRACES_HOME}/ligra/ligra_BFSCC.com-lj.ungraph.gcc_6.3.0_O3.drop_18750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_BFSCC_drop_22000M
+TRACE=${TRACES_HOME}/ligra/ligra_BFSCC.com-lj.ungraph.gcc_6.3.0_O3.drop_22000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+
+# -------- PageRank --------
+NAME=ligra_PageRank_drop_500M
+TRACE=${TRACES_HOME}/ligra/ligra_PageRank.com-lj.ungraph.gcc_6.3.0_O3.drop_500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_PageRank_drop_5000M
+TRACE=${TRACES_HOME}/ligra/ligra_PageRank.com-lj.ungraph.gcc_6.3.0_O3.drop_5000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_PageRank_drop_10750M
+TRACE=${TRACES_HOME}/ligra/ligra_PageRank.com-lj.ungraph.gcc_6.3.0_O3.drop_10750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_PageRank_drop_18500M
+TRACE=${TRACES_HOME}/ligra/ligra_PageRank.com-lj.ungraph.gcc_6.3.0_O3.drop_18500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_PageRank_drop_21750M
+TRACE=${TRACES_HOME}/ligra/ligra_PageRank.com-lj.ungraph.gcc_6.3.0_O3.drop_21750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_PageRank_drop_51000M
+TRACE=${TRACES_HOME}/ligra/ligra_PageRank.com-lj.ungraph.gcc_6.3.0_O3.drop_51000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_PageRank_drop_60750M
+TRACE=${TRACES_HOME}/ligra/ligra_PageRank.com-lj.ungraph.gcc_6.3.0_O3.drop_60750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_PageRank_drop_79500M
+TRACE=${TRACES_HOME}/ligra/ligra_PageRank.com-lj.ungraph.gcc_6.3.0_O3.drop_79500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+
+# -------- PageRankDelta --------
+NAME=ligra_PageRankDelta_drop_1250M
+TRACE=${TRACES_HOME}/ligra/ligra_PageRankDelta.com-lj.ungraph.gcc_6.3.0_O3.drop_1250M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_PageRankDelta_drop_3500M
+TRACE=${TRACES_HOME}/ligra/ligra_PageRankDelta.com-lj.ungraph.gcc_6.3.0_O3.drop_3500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_PageRankDelta_drop_6000M
+TRACE=${TRACES_HOME}/ligra/ligra_PageRankDelta.com-lj.ungraph.gcc_6.3.0_O3.drop_6000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_PageRankDelta_drop_11750M
+TRACE=${TRACES_HOME}/ligra/ligra_PageRankDelta.com-lj.ungraph.gcc_6.3.0_O3.drop_11750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_PageRankDelta_drop_17000M
+TRACE=${TRACES_HOME}/ligra/ligra_PageRankDelta.com-lj.ungraph.gcc_6.3.0_O3.drop_17000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_PageRankDelta_drop_24000M
+TRACE=${TRACES_HOME}/ligra/ligra_PageRankDelta.com-lj.ungraph.gcc_6.3.0_O3.drop_24000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_PageRankDelta_drop_24500M
+TRACE=${TRACES_HOME}/ligra/ligra_PageRankDelta.com-lj.ungraph.gcc_6.3.0_O3.drop_24500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_PageRankDelta_drop_35250M
+TRACE=${TRACES_HOME}/ligra/ligra_PageRankDelta.com-lj.ungraph.gcc_6.3.0_O3.drop_35250M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_PageRankDelta_drop_52000M
+TRACE=${TRACES_HOME}/ligra/ligra_PageRankDelta.com-lj.ungraph.gcc_6.3.0_O3.drop_52000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_PageRankDelta_drop_56500M
+TRACE=${TRACES_HOME}/ligra/ligra_PageRankDelta.com-lj.ungraph.gcc_6.3.0_O3.drop_56500M.length_208M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+# -------- MIS --------
+NAME=ligra_MIS_drop_750M
+TRACE=${TRACES_HOME}/ligra/ligra_MIS.com-lj.ungraph.gcc_6.3.0_O3.drop_750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_MIS_drop_3500M
+TRACE=${TRACES_HOME}/ligra/ligra_MIS.com-lj.ungraph.gcc_6.3.0_O3.drop_3500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_MIS_drop_5000M
+TRACE=${TRACES_HOME}/ligra/ligra_MIS.com-lj.ungraph.gcc_6.3.0_O3.drop_5000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_MIS_drop_11000M
+TRACE=${TRACES_HOME}/ligra/ligra_MIS.com-lj.ungraph.gcc_6.3.0_O3.drop_11000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_MIS_drop_15750M
+TRACE=${TRACES_HOME}/ligra/ligra_MIS.com-lj.ungraph.gcc_6.3.0_O3.drop_15750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_MIS_drop_17000M
+TRACE=${TRACES_HOME}/ligra/ligra_MIS.com-lj.ungraph.gcc_6.3.0_O3.drop_17000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_MIS_drop_21250M
+TRACE=${TRACES_HOME}/ligra/ligra_MIS.com-lj.ungraph.gcc_6.3.0_O3.drop_21250M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+
+# -------- Radii --------
+NAME=ligra_Radii_drop_750M
+TRACE=${TRACES_HOME}/ligra/ligra_Radii.com-lj.ungraph.gcc_6.3.0_O3.drop_750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_Radii_drop_3500M
+TRACE=${TRACES_HOME}/ligra/ligra_Radii.com-lj.ungraph.gcc_6.3.0_O3.drop_3500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_Radii_drop_5000M
+TRACE=${TRACES_HOME}/ligra/ligra_Radii.com-lj.ungraph.gcc_6.3.0_O3.drop_5000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_Radii_drop_12500M
+TRACE=${TRACES_HOME}/ligra/ligra_Radii.com-lj.ungraph.gcc_6.3.0_O3.drop_12500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_Radii_drop_18000M
+TRACE=${TRACES_HOME}/ligra/ligra_Radii.com-lj.ungraph.gcc_6.3.0_O3.drop_18000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_Radii_drop_24500M
+TRACE=${TRACES_HOME}/ligra/ligra_Radii.com-lj.ungraph.gcc_6.3.0_O3.drop_24500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_Radii_drop_25000M
+TRACE=${TRACES_HOME}/ligra/ligra_Radii.com-lj.ungraph.gcc_6.3.0_O3.drop_25000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_Radii_drop_32000M
+TRACE=${TRACES_HOME}/ligra/ligra_Radii.com-lj.ungraph.gcc_6.3.0_O3.drop_32000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_Radii_drop_36000M
+TRACE=${TRACES_HOME}/ligra/ligra_Radii.com-lj.ungraph.gcc_6.3.0_O3.drop_36000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+
+# -------- Triangle --------
+NAME=ligra_Triangle_drop_750M
+TRACE=${TRACES_HOME}/ligra/ligra_Triangle.com-lj.ungraph.gcc_6.3.0_O3.drop_750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_Triangle_drop_3500M
+TRACE=${TRACES_HOME}/ligra/ligra_Triangle.com-lj.ungraph.gcc_6.3.0_O3.drop_3500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_Triangle_drop_6000M
+TRACE=${TRACES_HOME}/ligra/ligra_Triangle.com-lj.ungraph.gcc_6.3.0_O3.drop_6000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_Triangle_drop_10250M
+TRACE=${TRACES_HOME}/ligra/ligra_Triangle.com-lj.ungraph.gcc_6.3.0_O3.drop_10250M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_Triangle_drop_18000M
+TRACE=${TRACES_HOME}/ligra/ligra_Triangle.com-lj.ungraph.gcc_6.3.0_O3.drop_18000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_Triangle_drop_24000M
+TRACE=${TRACES_HOME}/ligra/ligra_Triangle.com-lj.ungraph.gcc_6.3.0_O3.drop_24000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_Triangle_drop_25000M
+TRACE=${TRACES_HOME}/ligra/ligra_Triangle.com-lj.ungraph.gcc_6.3.0_O3.drop_25000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_Triangle_drop_25250M
+TRACE=${TRACES_HOME}/ligra_Triangle.com-lj.ungraph.gcc_6.3.0_O3.drop_25250M.length_8M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+# -------- Components --------
+NAME=ligra_Components_drop_750M
+TRACE=${TRACES_HOME}/ligra/ligra_Components.com-lj.ungraph.gcc_6.3.0_O3.drop_750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_Components_drop_3500M
+TRACE=${TRACES_HOME}/ligra/ligra_Components.com-lj.ungraph.gcc_6.3.0_O3.drop_3500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_Components_drop_5000M
+TRACE=${TRACES_HOME}/ligra/ligra_Components.com-lj.ungraph.gcc_6.3.0_O3.drop_5000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_Components_drop_6250M
+TRACE=${TRACES_HOME}/ligra/ligra_Components.com-lj.ungraph.gcc_6.3.0_O3.drop_6250M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_Components_drop_12500M
+TRACE=${TRACES_HOME}/ligra/ligra_Components.com-lj.ungraph.gcc_6.3.0_O3.drop_12500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_Components_drop_15750M
+TRACE=${TRACES_HOME}/ligra/ligra_Components.com-lj.ungraph.gcc_6.3.0_O3.drop_15750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_Components_drop_18000M
+TRACE=${TRACES_HOME}/ligra/ligra_Components.com-lj.ungraph.gcc_6.3.0_O3.drop_18000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_Components_drop_22750M
+TRACE=${TRACES_HOME}/ligra/ligra_Components.com-lj.ungraph.gcc_6.3.0_O3.drop_22750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_Components_drop_23750M
+TRACE=${TRACES_HOME}/ligra/ligra_Components.com-lj.ungraph.gcc_6.3.0_O3.drop_23750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+
+# -------- Components-Shortcut --------
+NAME=ligra_ComponentsShortcut_drop_750M
+TRACE=${TRACES_HOME}/ligra/ligra_Components-Shortcut.com-lj.ungraph.gcc_6.3.0_O3.drop_750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_ComponentsShortcut_drop_3500M
+TRACE=${TRACES_HOME}/ligra/ligra_Components-Shortcut.com-lj.ungraph.gcc_6.3.0_O3.drop_3500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_ComponentsShortcut_drop_5000M
+TRACE=${TRACES_HOME}/ligra/ligra_Components-Shortcut.com-lj.ungraph.gcc_6.3.0_O3.drop_5000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_ComponentsShortcut_drop_11500M
+TRACE=${TRACES_HOME}/ligra/ligra_Components-Shortcut.com-lj.ungraph.gcc_6.3.0_O3.drop_11500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_ComponentsShortcut_drop_17000M
+TRACE=${TRACES_HOME}/ligra/ligra_Components-Shortcut.com-lj.ungraph.gcc_6.3.0_O3.drop_17000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_ComponentsShortcut_drop_21000M
+TRACE=${TRACES_HOME}/ligra/ligra_Components-Shortcut.com-lj.ungraph.gcc_6.3.0_O3.drop_21000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_ComponentsShortcut_drop_22000M
+TRACE=${TRACES_HOME}/ligra/ligra_Components-Shortcut.com-lj.ungraph.gcc_6.3.0_O3.drop_22000M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+
+# -------- CF --------
+NAME=ligra_CF_drop_2500M
+TRACE=${TRACES_HOME}/ligra/ligra_CF.com-lj.ungraph.gcc_6.3.0_O3.drop_2500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_CF_drop_10750M
+TRACE=${TRACES_HOME}/ligra/ligra_CF.com-lj.ungraph.gcc_6.3.0_O3.drop_10750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_CF_drop_154750M
+TRACE=${TRACES_HOME}/ligra/ligra_CF.com-lj.ungraph.gcc_6.3.0_O3.drop_154750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+NAME=ligra_CF_drop_184750M
+TRACE=${TRACES_HOME}/ligra/ligra_CF.com-lj.ungraph.gcc_6.3.0_O3.drop_184750M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000

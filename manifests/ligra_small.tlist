@@ -1,0 +1,19 @@
+# =========================================
+# LIGRA SMALL (4 traces, SINGLE-CORE)
+# =========================================
+
+NAME=ligra_BFS.drop_3500M
+TRACE=${TRACES_HOME}/ligra/ligra_BFS.com-lj.ungraph.gcc_6.3.0_O3.drop_3500M.length_250M.champsimtrace.xz
+KNOBS=--warmup_instructions=1000000 --simulation_instructions=1500000
+
+# NAME=ligra_PageRank.drop_5000M
+# TRACE=${TRACES_HOME}/ligra/ligra_PageRank.com-lj.ungraph.gcc_6.3.0_O3.drop_5000M.length_250M.champsimtrace.xz
+# KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+# NAME=ligra_Triangle.drop_3500M
+# TRACE=${TRACES_HOME}/ligra/ligra_Triangle.com-lj.ungraph.gcc_6.3.0_O3.drop_3500M.length_250M.champsimtrace.xz
+# KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000
+
+# NAME=ligra_MIS.drop_3500M
+# TRACE=${TRACES_HOME}/ligra/ligra_MIS.com-lj.ungraph.gcc_6.3.0_O3.drop_3500M.length_250M.champsimtrace.xz
+# KNOBS=--warmup_instructions=100000000 --simulation_instructions=150000000

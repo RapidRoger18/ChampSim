@@ -83,8 +83,8 @@
     "max_fill": 1,
     "prefetch_as_load": false,
     "virtual_prefetch": false,
-    "prefetch_activate": "LOAD,PREFETCH",
-    "prefetcher": "no"
+    "prefetch_activate": "LOAD",
+    "prefetcher": "bandit"
   },
 
   "ITLB": {
